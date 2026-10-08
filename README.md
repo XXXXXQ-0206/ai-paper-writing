@@ -2,8 +2,6 @@
 
 写作 LLM / VLM 论文时给 AI 代理用的 skill。技能本体是一份按论文模块分簇的语料：从 64 篇 AI 论文的 LaTeX 源码里抽出正文、剥掉图表公式与引用，按 Introduction / Related Work / Preliminaries / Method / Discussion / Conclusion / Abstract 七个模块归堆。
 
-> 本仓库含第三方论文正文片段，仅作个人写作参考，**请勿公开分发或转为 public**。若要公开，只能发布 `scripts/` 与 `papers.tsv`，语料由使用者本地重建。
-
 ## 结构
 
 ```
@@ -71,7 +69,3 @@ python scripts/build_clusters.py         # 切分为七个模块
 ```
 
 注意两点：`fetch_corpus.py` 与 `fetch_meta.py` 会访问 arxiv.org，脚本里已按每篇 3–4 秒的节奏限速；若本机走代理导致 `export.arxiv.org` 返回 429，改用 arXiv 检索页或直连 OpenAlex（脚本内已做无代理处理）。
-
-## 版权
-
-`references/` 下内容为 arXiv 论文正文的摘录，著作权归原作者与出版方所有，此处仅用于个人写作学习，不构成任何再授权。`scripts/` 与 `SKILL.md` 为自写代码与说明。
