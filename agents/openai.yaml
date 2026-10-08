@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 论文写作（LLM/VLM）"
+  short_description: "写 LLM/VLM 论文时按模块检索的 62 篇论文语料"
+  default_prompt: "用 $ai-paper-writing 写一篇 LLM/VLM 方向的论文。"
